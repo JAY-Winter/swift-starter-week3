@@ -66,8 +66,8 @@ class CoffeeShop {
     }
     
     var pickUpTable: String? {
-        willSet(newMenu) {
-            guard let newMenu = newMenu else { return }
+        didSet {
+            guard let newMenu = pickUpTable else { return }
             print("\(newMenu)가 준비되었습니다. 픽업대에서 가져가주세요.")
         }
     }
